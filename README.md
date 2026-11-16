@@ -66,6 +66,12 @@ src/
    ```
 5. Öppna `http://127.0.0.1:5173` och logga in med ditt Spotify-konto.
 
+### Publicera på Netlify
+- Build command: `npm run build`, publish directory: `dist`
+- Lägg till miljövariabeln `VITE_CLIENT_ID` under Site configuration → Environment variables
+- Lägg till `https://<din-sida>.netlify.app/callback` som Redirect URI i Spotify-dashboarden
+- `public/_redirects` gör att sidor som `/dashboard` fungerar vid omladdning
+
 > **OBS:** Uppspelning kräver Spotify Premium. Spotify-appar i utvecklingsläge kan bara användas av konton som har lagts till under **Users and access** i dashboarden.
 
 ## Bakgrund
